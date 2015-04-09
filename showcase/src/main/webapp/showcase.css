@@ -1,0 +1,322 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+
+
+/* Menu */
+
+
+
+nav {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 3.5rem;
+	height: 100%;
+	background: none repeat scroll 0% 0% #2680F3;
+	transition: all 300ms ease 0s;
+	overflow: hidden;
+	z-index: 1;
+	box-shadow: 0px 0px 10px #333;
+}
+
+nav.horizontal {
+	width: 100%;
+}
+
+nav.horizontal>ul {
+	text-align: center;
+}
+
+html, body {
+	font-weight: 400;
+	font-family: "Quicksand", "Open Sans", "Helvetica Neue", "Helvetica",
+		sans-serif;
+	font-size: 18px;
+}
+
+nav>ul {
+	display: table;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+nav:hover, nav.active {
+	width: 100%;
+}
+
+nav * {
+	-moz-user-select: none;
+}
+
+nav>ul>li {
+	display: table-row;
+	background: none repeat scroll 0% 0% #0C66DA;
+	cursor: pointer;
+}
+
+nav.horizontal>ul>li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+nav>ul>li:hover {
+	background: none repeat scroll 0% 0% #569CF6;
+}
+
+nav>ul>li.active:hover {
+	background: none repeat scroll 0% 0% rgba(224, 137, 137, 1);
+}
+
+nav.horizontal>ul>li .Gwt-MenuItem-Title {
+	display: none;
+}
+
+nav>ul>li .Gwt-MenuItem-Title {
+	text-align: center;
+	white-space: nowrap;
+	padding-left: 1.7rem;
+	padding-right: 1.75rem;
+}
+
+nav>ul>li .Gwt-MenuItem-Label {
+	text-align: left;
+	white-space: nowrap;
+}
+
+nav>ul>li .Gwt-MenuItem-Content {
+	display: none;
+	height: 0px;
+	transition: all 300ms ease 0s;
+}
+
+nav>ul>li .Gwt-MenuItem-Content.active {
+	display: block;
+	height: auto;
+}
+
+nav>ul>li>div>div, nav>ul>li>div>span {
+	height: 3.5rem;
+	line-height: 3.5rem;
+	display: table-cell;
+	white-space: nowrap;
+	color: #FFF;
+	font-weight: 400;
+	font-family: "Quicksand", "Open Sans", "Helvetica Neue", "Helvetica",
+		sans-serif;
+	font-size: 18px;
+}
+
+.Gwt-Toggle-Menu {
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	top: 80px;
+	left: -130px;
+	background: none repeat scroll 0% 0% #FFF;
+	z-index: 99;
+}
+
+.Gwt-Toggle-Menu .line {
+	width: 28px;
+	height: 1px;
+	display: block;
+	background: none repeat scroll 0% 0% #000;
+	position: absolute;
+	left: 15px;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.Gwt-Toggle-Menu .line.first {
+	top: 20px;
+}
+
+.Gwt-Toggle-Menu:hover .line.first {
+	top: 15px;
+}
+
+.Gwt-Toggle-Menu.active .line.first {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 50%;
+	-webkit-transition-delay: 110ms;
+	-moz-transition-delay: 110ms;
+	-ms-transition-delay: 110ms;
+	-o-transition-delay: 110ms;
+	transition-delay: 110ms;
+}
+
+.Gwt-Toggle-Menu.active:hover .line.first {
+	-webkit-transform: rotate(-45deg) scale(0.9);
+	-moz-transform: rotate(-45deg) scale(0.9);
+	-ms-transform: rotate(-45deg) scale(0.9);
+	-o-transform: rotate(-45deg) scale(0.9);
+	transform: rotate(-45deg) scale(0.9);
+	-webkit-transition-delay: 110ms;
+	-moz-transition-delay: 110ms;
+	-ms-transition-delay: 110ms;
+	-o-transition-delay: 110ms;
+	transition-delay: 110ms;
+}
+
+.Gwt-Toggle-Menu .line.second {
+	top: 29px;
+}
+
+.Gwt-Toggle-Menu.active .line.second {
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	top: 29px;
+}
+
+.Gwt-Toggle-Menu .line.third {
+	top: 37px;
+}
+
+.Gwt-Toggle-Menu:hover .line.third {
+	top: 42px;
+}
+
+.Gwt-Toggle-Menu.active:hover .line.third {
+	-webkit-transform: rotate(-134deg) scale(0.9);
+	-moz-transform: rotate(-134deg) scale(0.9);
+	-ms-transform: rotate(-134deg) scale(0.9);
+	-o-transform: rotate(-134deg) scale(0.9);
+	transform: rotate(-134deg) scale(0.9);
+}
+
+.Gwt-Toggle-Menu.active .line.third {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 50%;
+}
+
+nav > ul > li.active, nav > ul > li.active{
+	background-color: red;
+}
+
+
+/* Loader: */
+.loader {
+  position: relative;
+  padding-top: 100px;
+  width: 40px;
+  margin: auto;
+}
+
+.loader .circle {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+  transform: rotate(225deg);
+  animation-iteration-count: infinite;
+  animation-name: orbit;
+  animation-duration: 5.5s;
+}
+
+.loader .circle:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background: #D0E;
+  /* Pick a color */
+}
+
+.loader .circle:nth-child(2) {
+  animation-delay: 240ms;
+}
+
+.loader .circle:nth-child(3) {
+  animation-delay: 480ms;
+}
+
+.loader .circle:nth-child(4) {
+  animation-delay: 720ms;
+}
+
+.loader .circle:nth-child(5) {
+  animation-delay: 960ms;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(225deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  7% {
+    transform: rotate(345deg);
+    animation-timing-function: linear;
+  }
+  30% {
+    transform: rotate(455deg);
+    animation-timing-function: ease-in-out;
+  }
+  39% {
+    transform: rotate(690deg);
+    animation-timing-function: linear;
+  }
+  70% {
+    transform: rotate(815deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: rotate(945deg);
+    animation-timing-function: ease-out;
+  }
+  76% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+}

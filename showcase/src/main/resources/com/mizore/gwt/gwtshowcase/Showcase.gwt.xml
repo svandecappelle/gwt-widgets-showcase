@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Showcase'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.junit.JUnit' />
+
+	<inherits name='net.customware.gwt.presenter.Presenter' />
+	<inherits name="com.google.gwt.inject.Inject" />
+	<inherits name="fr.vekia.vkgraph.VkGraph" />
+	<inherits name="com.mizore.gwt.logging.Logging" />
+	<inherits name="com.mizore.gwt.widgets.MizoreWidgets" />
+
+	<entry-point class='com.mizore.gwt.gwtshowcase.client.Showcase' />
+
+	<source path='client' />
+	<source path='shared' />
+
+	<add-linker name="xsiframe" />
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+	<set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE' />
+</module>

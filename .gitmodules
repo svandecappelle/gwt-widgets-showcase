@@ -1,0 +1,3 @@
+[submodule "gwt-widgets"]
+	path = gwt-widgets
+	url = https://github.com/svandecappelle/gwt-widgets.git
