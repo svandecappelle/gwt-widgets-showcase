@@ -1,8 +1,5 @@
 package com.mizore.gwt.gwtshowcase.client.application.presenter;
 
-import net.customware.gwt.presenter.client.EventBus;
-import net.customware.gwt.presenter.client.widget.WidgetPresenter;
-
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;
@@ -10,7 +7,6 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.mizore.gwt.logging.client.control.presenter.LoggingPresenter;
 import com.mizore.gwt.gwtshowcase.client.application.interfaces.ApplicationDisplay;
 import com.mizore.gwt.gwtshowcase.client.authentication.events.AuthenticatedEvent;
 import com.mizore.gwt.gwtshowcase.client.authentication.events.AuthenticatedHandler;
@@ -19,6 +15,11 @@ import com.mizore.gwt.gwtshowcase.client.screen.demo.presenter.DemoScreenPresent
 import com.mizore.gwt.gwtshowcase.client.screen.dnd.datagrid.presenter.DnDataGridPresenter;
 import com.mizore.gwt.gwtshowcase.client.screen.graph.presenter.GraphScreenPresenter;
 import com.mizore.gwt.gwtshowcase.client.screen.menu.presenter.MenuPresenter;
+import com.mizore.gwt.gwtshowcase.client.screen.tree.presenter.TreeWidgetPresenter;
+import com.mizore.gwt.logging.client.control.presenter.LoggingPresenter;
+
+import net.customware.gwt.presenter.client.EventBus;
+import net.customware.gwt.presenter.client.widget.WidgetPresenter;
 
 @Singleton
 public class ApplicationPresenter extends WidgetPresenter<ApplicationDisplay> {
@@ -27,6 +28,7 @@ public class ApplicationPresenter extends WidgetPresenter<ApplicationDisplay> {
     private HasClickHandlers graph;
     private HasClickHandlers menu;
     private HasClickHandlers dnd;
+    private HasClickHandlers tree;
 
     @Inject
     private Provider<DemoScreenPresenter> presenterDemoGenerator;
@@ -37,6 +39,9 @@ public class ApplicationPresenter extends WidgetPresenter<ApplicationDisplay> {
 
     @Inject
     private DnDataGridPresenter dragNdropDataGridPresenter;
+
+    @Inject
+    private TreeWidgetPresenter treeWidget;
 
     @Inject
     private LoggingPresenter presenterLogging;
@@ -55,6 +60,8 @@ public class ApplicationPresenter extends WidgetPresenter<ApplicationDisplay> {
         this.graph = display.addMenuItem("G", "Graph");
         this.menu = display.addMenuItem("M", "Menu");
         this.dnd = display.addMenuItem("N", "Drag/Drop datagrid");
+        this.tree = display.addMenuItem("T", "TreeWidget");
+
     }
 
     @Override
@@ -112,6 +119,18 @@ public class ApplicationPresenter extends WidgetPresenter<ApplicationDisplay> {
                 display.setCenterWidget(dragNdropDataGridPresenter.getDisplay());
                 dragNdropDataGridPresenter.bind();
                 dragNdropDataGridPresenter.revealDisplay();
+            }
+        }));
+
+        registerHandler(tree.addClickHandler(new ClickHandler() {
+
+            @Override
+            public void onClick(ClickEvent event) {
+                presenterGraph.unbind();
+
+                display.setCenterWidget(treeWidget.getDisplay());
+                treeWidget.bind();
+                treeWidget.revealDisplay();
             }
         }));
 

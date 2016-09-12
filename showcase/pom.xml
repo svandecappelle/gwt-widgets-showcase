@@ -5,11 +5,18 @@
 	<!-- POM file generated with GWT webAppCreator -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mizore.gwt</groupId>
-	<artifactId>gwtshowcase-src</artifactId>
+	<artifactId>mizore-showcase</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Mizore widgets showcase srcs</name>
 
+	<properties>
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.7.0</gwtVersion>
+		<!-- GWT needs at least java 1.5 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
@@ -60,11 +67,11 @@
 		<dependency>
 			<groupId>com.mizore.gwt</groupId>
 			<artifactId>logging</artifactId>
-			<version>2.0.1-SNAPSHOT</version>
+			<version>2.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mizore.gwt</groupId>
-			<artifactId>gwt-widgets</artifactId>
+			<artifactId>mizore-widgets</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
@@ -172,9 +179,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<parent>
-		<groupId>com.mizore.gwt</groupId>
-		<artifactId>gwtshowcase</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
 </project>

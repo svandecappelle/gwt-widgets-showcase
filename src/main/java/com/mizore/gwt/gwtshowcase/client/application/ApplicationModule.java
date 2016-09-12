@@ -16,6 +16,8 @@ import com.mizore.gwt.gwtshowcase.client.screen.graph.interfaces.GraphDisplay;
 import com.mizore.gwt.gwtshowcase.client.screen.graph.view.GraphViewImpl;
 import com.mizore.gwt.gwtshowcase.client.screen.menu.interfaces.MenuDisplay;
 import com.mizore.gwt.gwtshowcase.client.screen.menu.view.MenuViewImpl;
+import com.mizore.gwt.gwtshowcase.client.screen.tree.interfaces.TreeWidgetDisplay;
+import com.mizore.gwt.gwtshowcase.client.screen.tree.view.TreeWidgetViewImpl;
 
 public class ApplicationModule extends AbstractGinModule{
 
@@ -32,6 +34,7 @@ public class ApplicationModule extends AbstractGinModule{
 		bind(GraphDisplay.class).to(GraphViewImpl.class);
 		bind(MenuDisplay.class).to(MenuViewImpl.class);
 		bind(DnDataGridDisplay.class).to(DnDataGridViewImpl.class);
+		bind(TreeWidgetDisplay.class).to(TreeWidgetViewImpl.class);
 	}
 
 }

@@ -1,0 +1,42 @@
+
+.checkbox{
+	position: relative;		
+}
+
+.checkbox>input{
+	display: none;
+	z-index: 1;
+	position: absolute;
+	top: -16px;
+	left: -10px;
+	width: 32px;
+	visibility: hidden;
+}
+
+.checkbox>label{
+	position: relative;
+	padding-left: 32px;
+}
+
+@sprite .checkbox>label:before{
+	content: '';
+	width: 20px;
+	height: 32px;
+	position: absolute;
+	gwt-image: 'checkboxImage';
+	background-position: left 0px top 0px;
+	left: 0px;
+	top: -6px;
+}
+
+.checkbox.true>label:before{
+	background-position: left -64px top -0px;
+}
+
+.checkbox.partial>label:before{
+	background-position: left -28px top -0px;
+}
+
+.checkbox.false>label:before{
+	background-position: left 0px top -0px;
+}
